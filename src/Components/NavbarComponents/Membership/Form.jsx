@@ -217,7 +217,8 @@ function Form(props) {
                   <input
                     type="submit"
                     value="Submit"
-                    className="btn btn-primary btn-lg"
+                    className="btn my-3 btn-lg"
+                    style={{backgroundColor:"pink" }}
                   />
                 </div>
               </form>

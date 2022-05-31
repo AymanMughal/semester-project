@@ -15,6 +15,7 @@
   margin-top: 90px;
   font-weight: 800;
   margin-left: 100px;
+  border: none;
 }
 .banner__text h1 {
   color: rgb(255, 238, 0);
@@ -23,6 +24,7 @@
   font-size: xx-large;
   font-weight: 1000;
   margin-left: 100px;
+  border: none;
 }
 .banner__text p {
   margin-top: 30px;
@@ -32,12 +34,15 @@
   width: 400px;
   height: auto;
   font-weight: 800;
+  border: none;
 }
 .banner__btn {
   margin-top: 70px;
-  margin-left: 120px;
+ 
   width: 160px;
   height: 38px;
   border-radius: 100px;
   background-color: rgb(230, 29, 29);
+  margin-right: 750px;
+  border: none;
 }

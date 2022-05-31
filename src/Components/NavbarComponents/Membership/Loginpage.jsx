@@ -29,7 +29,7 @@ const Form = () => {
   });
 
   return (
-    <div className="col-12 ">
+    <div className=" loginpage col-12 ">
       <div className=" col-6 py-5 h-100 formh ">
         <div className="row justify-content-center align-items-center h-100">
           <div
@@ -93,11 +93,11 @@ const Form = () => {
                     ) : null}
                   </div>
                 </div>
-                <div className="loginbutton">
+                <div className="loginbutton my-3" >
                   <Link to="/">
-                    <button className="btn " id="loginbutton1">Login</button>
+                    <button className="btn " id="loginbutton1" style={{backgroundColor:"pink" }}>Login</button>
                   </Link>
-                  <Link to="/signup"><button className="btn " id="loginbutton2">SignUp</button></Link>
+                  <Link to="/signup"><button className="btn " id="loginbutton2" style={{backgroundColor:"pink" }}>SignUp</button></Link>
                   
                 </div>
               </div>

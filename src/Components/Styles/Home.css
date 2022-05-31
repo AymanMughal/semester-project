@@ -6,15 +6,11 @@
 .cnavbar {
   width: 100%;
 }
-.ccarousel {
-  width: 100%;
-}
+
 .cfooter {
   width: 100%;
 }
-.carousel1 {
-  height: 500px;
-}
+
 
 .cheader {
   background-image: url("../../images/landing_image.jpg");
@@ -27,9 +23,6 @@
   background-position: center;
 }
 .cheader2 {
-
- 
   width: 100%;
   height: 500px;
-
 }

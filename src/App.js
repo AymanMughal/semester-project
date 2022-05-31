@@ -6,7 +6,7 @@ import Menu from "./Components/NavbarComponents/Cart/Menu";
 import SignUp from "./Components/NavbarComponents/Membership/SignUp";
 import About from "./Components/NavbarComponents/About"
 import Form1 from "./Components/NavbarComponents/Membership/Form"
-
+import Pcarousel from "./Components/Homee/Carousel/Pcarousel";
 import Navbar from "./Components/Homee/Navbar";
 import Cart from "./Components/NavbarComponents/Cart/Cart";
 import List from "./Components/NavbarComponents/Membership/List";
@@ -49,7 +49,6 @@ function App() {
     
      
       <Navbar setShow={setShow} size={cart.length} />
-      
       <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/menu" element={<Menu handleClick={handleClick} />}></Route>
@@ -58,7 +57,6 @@ function App() {
           <Route exact path="/checkout" element={<Checkout />}></Route>
           <Route exact path="/membership" element={<Loginpage />}></Route>
           <Route exact path="/signup" element={<SignUp Data_={previousdata} />}></Route>
-         
           <Route exact path="/list" element={<List iv={inputvalues}/>}></Route> 
         </Routes>
        <  Footer className="appfooter"/>

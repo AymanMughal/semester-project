@@ -7,13 +7,13 @@ const MenuCard = ({ item, handleClick }) => {
   return (
     <div className="menucard">
       
-      <div className="card " >
+      <div className="card card2 " >
         <img src={img} className="card-img-top top-img" alt="" />
         <div className="card-body gf">
           <h5 className="card-title">{title}</h5>
           <p className="card-text">From {description} Anime</p>
           <p className="card-text">Price:¥{price}</p>
-         <Link to=""> <button  className="btn btn" id="btn1"  onClick={() => handleClick(item)}>
+         <Link to=""> <button  className="btn " id="btn1"  onClick={() => handleClick(item)}>
             Add to Cart
           </button></Link>
  

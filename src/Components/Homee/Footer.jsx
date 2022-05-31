@@ -1,74 +1,60 @@
 import React, { Component } from "react";
-import "../Styles/Footer.css"
+import "../Styles/Footer.css";
 import logi from "../../images/ramen1.png";
-import {BsFacebook,BsTwitter,BsInstagram,BsGithub} from "react-icons/bs";
+import { BsFacebook, BsTwitter, BsInstagram, BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <div className="footi ">
-      <footer className="d-flex flex-wrap justify-content-between align-items-center py-3  border-top">
-        <p className="col-md-4 mb-0 text-muted">&copy; 2021 Restaurant, Owned by AJ</p>
    
+    <div className="footi bg-dark">
+      <footer className="d-flex flex-wrap justify-content-between align-items-center  border-top">
+        <p className="col-md-4 mb-0 text-mut">&copy; 2022 Company, Inc</p>
+
         <Link
           to="/"
           className="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
         >
-          <img className="logii" src={logi} alt="" />
+          <img src={logi} alt=""  className="logii "/>
         </Link>
 
-        <ul className="nav col-md-4 justify-content-end">
+        <ul className="nav col-md-4 justify-content-end d-flex ftext my-4  ">
           <li className="nav-item">
-            <Link to="/" className="nav-link px-2 text-muted">
-              Home
+            <Link  to=""className="nav-link px-2 text-muted ">
+              <p className="text-mut">Home</p> 
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="" className="nav-link px-2 text-muted">
+            <p className="text-mut">Features</p> 
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/list" className="nav-link px-2 text-muted">
-              List
+            <p className="text-mut">List</p> 
             </Link>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link px-2 text-muted">
-              Pricing
-            </a>
+            <Link to="" className="nav-link px-2 text-muted">
+            <p className="text-mut">FAQs</p> 
+            </Link>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link px-2 text-muted">
-              FAQs
-            </a>
+            <Link to="/about" className="nav-link px-2 text-muted">
+              <p className="text-mut">About</p> 
+            </Link>
           </li>
-          <li className="nav-item">
-            <a href="#" className="nav-link px-2 text-muted">
-              About
-            </a>
-          </li>
+          <ul className="nav col-md-6 my-1 justify-content-end align-items-centre list-unstyled d-flex">
+        <li className="ms-3"><Link className="text-muted" to=""><svg className="bi" width="24" height="24"><BsFacebook className=" socialfooer"/></svg></Link></li>
+        <li className="ms-3"><Link className="text-muted" to=""><svg className="bi" width="24" height="24"><BsTwitter className=" socialfooer"/></svg></Link></li>
+        <li className="ms-3"><Link className="text-muted" to=""><svg className="bi" width="24" height="24"><BsInstagram className=" socialfooer"/></svg></Link></li>
+        <li className="ms-3"><Link className="text-muted " to=""><svg className="bi" width="24" height="24"><BsGithub className=" socialfooer"/></svg></Link></li>
+
+      </ul>
         </ul>
-        <ul className="social  col-md-4 justify-content-center">
-          <li className="nav-item">
-            <Link to="https://facebook.com" className="nav-link px-2 text-muted socialfooer">
-              <BsFacebook />
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="https://twitter.com" className="nav-link px-2 text-muted socialfooer">
-              <BsTwitter  />
-            </Link>
-          </li>
-          <li className="nav-item">
-            <a href="https://instagram.com" className="nav-link px-2 text-muted socialfooer">
-              <BsInstagram   />
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="https://github.com" className="nav-link px-2 text-muted socialfooer">
-              <BsGithub  />
-            </a>
-          </li>
-        </ul>
+        
       </footer>
-      
-      
     </div>
+  
   );
 };
 
