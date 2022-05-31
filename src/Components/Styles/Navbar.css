@@ -1,0 +1,28 @@
+.Navbar {
+  background-color: aquamarine;
+}
+.ntext{
+    font-family: Roboto;
+    font-size:large;
+    margin-left: 50px;
+}
+.rtext{
+margin-left: 380px;
+}
+.logoimgsize {
+  width: 100px;
+  height: 100px;
+}
+.logi {
+  width: 100px;
+  height: 100px;
+}
+
+#nav-item span:hover{
+  text-transform: uppercase;
+}
+.ntext:hover {
+  border-bottom: 3px solid red;
+  font-style: italic;
+  transform: scale(1.2);
+}
