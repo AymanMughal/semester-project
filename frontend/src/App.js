@@ -1,17 +1,16 @@
 import "./App.css";
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import { addApplicant } from "./Service/api";
-import Home from "./Components/Homee/Home"
-import Menu from "./Components/NavbarComponents/Cart/Menu";
-import SignUp from "./Components/NavbarComponents/Membership/SignUp";
-import About from "./Components/NavbarComponents/About"
-import Navbar from "./Components/Homee/Navbar";
-import Cart from "./Components/NavbarComponents/Cart/Cart";
-import List from "./Components/NavbarComponents/Membership/List";
-import Footer from "./Components/Homee/Footer";
-import Checkout from "./Components/NavbarComponents/Cart/Checkout";
-import Loginpage from "./Components/NavbarComponents/Membership/Loginpage";
+import Home from "./Components/Homee/Home/Home"
+import Menu from "./Components/Menu/Menu/Menu"
+import About from "./Components/About/About"
+import Navbar from "./Components/Homee/Navbar/Navbar";
+import Cart from "./Components/Cart/Cart/Cart";
+import List from "./Components/List/List";
+import Footer from "./Components/Homee/Footer/Footer";
+import Checkout from "./Components/Cart/Checkout/Checkout";
+import Loginpage from "./Components/LoginSignup/Loginpage/Loginpage";
+import Form from "./Components/LoginSignup/Form/Form";
 
 function App() {
 
@@ -33,19 +32,6 @@ function App() {
     setCart([...cart]);
   };
 
-  var inputdata = []
-  
-  const [inputvalues, setinputvalues] = useState(inputdata);
-  const previousdata = (values) => {
-    setinputvalues((prev) => {
-      return [...prev, values ];
-      
-    });   
-  };
-  const addDetails = async (e) => {
-    e.preventDefault();
-    await addApplicant(inputvalues);
-  }
 
   return (
     <div className="App">
@@ -58,9 +44,11 @@ function App() {
           <Route exact path="/cart" element={<Cart  cart={cart} setCart={setCart}  handleChange={handleChange}/>}></Route>
           <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/checkout" element={<Checkout />}></Route>
+          <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/membership" element={<Loginpage />}></Route>
-          <Route exact path="/signup" element={<SignUp Data_={previousdata} />}></Route>
-          <Route exact path="/list" element={<List iv={inputvalues}/>}></Route> 
+          <Route exact path="/signup" element={<Form/>}></Route>
+          <Route exact path="/list" element={<List/>}></Route> 
+
         </Routes>
        <  Footer className="appfooter"/>
     </div>
