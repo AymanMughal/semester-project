@@ -11,6 +11,7 @@ import Footer from "./Components/Homee/Footer/Footer";
 import Checkout from "./Components/Cart/Checkout/Checkout";
 import Loginpage from "./Components/LoginSignup/Loginpage/Loginpage";
 import Form from "./Components/LoginSignup/Form/Form";
+import Menuadmin from "./Components/Menuadmin/Menuadmin"
 
 function App() {
 
@@ -48,6 +49,7 @@ function App() {
           <Route exact path="/membership" element={<Loginpage />}></Route>
           <Route exact path="/signup" element={<Form/>}></Route>
           <Route exact path="/list" element={<List/>}></Route> 
+          <Route exact path="/menuadmin" element={<Menuadmin/>}></Route> 
 
         </Routes>
        <  Footer className="appfooter"/>

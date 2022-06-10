@@ -5,7 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    
+    "build": "cd frontend && npm run build",
+    "installation": "cd frontend && npm install",
+    "heroku-postbuild": "npm run install-client && npp run build",
+    "start": "nodemon index.js",
+    "client":"cd frontend && npm start"
+   
   },
   "keywords": [],
   "author": "",

@@ -1,8 +1,8 @@
 import React from "react";
-import "./Form.css";
+import "./Menuadmin.css";
 import * as yup from "yup";
 import { useFormik, Formik, ErrorMessage } from "formik";
-import { addApplicant } from "../../../Service/api";
+import { addApplicant } from "./../../Service/api";
 
 const validationSchema = yup.object({
   FullName: yup.string().required("Name is Required!"),
@@ -21,7 +21,7 @@ const validationSchema = yup.object({
 });
 const renderError = (message) => <p className="help is-danger">{message}</p>;
 
-function Form() {
+function Menuadmin() {
   const formik = useFormik({
     initialValues: {
       FullName: "",
@@ -241,4 +241,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default Menuadmin;

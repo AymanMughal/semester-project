@@ -34,8 +34,8 @@ const Footer = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="" className="nav-link px-2 text-muted">
-            <p className="text-mut">FAQs</p> 
+            <Link to="/menuadmin" className="nav-link px-2 text-muted">
+            <p className="text-mut">Menu Admin</p> 
             </Link>
           </li>
           <li className="nav-item">
