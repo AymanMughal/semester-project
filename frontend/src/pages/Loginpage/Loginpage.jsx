@@ -13,7 +13,7 @@ function Loginpage(props) {
     const enteredUsername = usernameRef.current.value;
     const enteredPassword = passwordRef.current.value;
     var res=await addLogin(enteredUsername,enteredPassword);
-    alert(res.data);
+   
 
 
     if(res.data==200){
