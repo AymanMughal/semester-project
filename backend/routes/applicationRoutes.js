@@ -1,16 +1,24 @@
 import express from 'express';
-import { getApplication, postApplication, deleteApplication, updateApplication } from '../controllers/applicationController.js';
+import { getApplication, postApplication, deleteApplication, updateApplication,getApplicationById, Login ,verifiedToken} from '../controllers/applicationController.js';
 
 const router = express.Router();
 
 
+
+
 //get, post, put, delete
-router.get("/", getApplication);
+router.get("/viewApplicants", getApplication);
 
-router.post("/", postApplication);
+router.get("/viewApplicants/:id", getApplicationById);
 
-router.put("/", updateApplication);
+router.post("/postApplication", postApplication);
 
-router.delete("/", deleteApplication);
+router.post("/postLogin", Login);
 
+router.put("/updateApplicants/:id", updateApplication);
+
+
+router.delete("/deleteApplicants/:id", deleteApplication);
+ 
 export default router;
+

@@ -1,16 +1,15 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import {GrCaretNext,GrCaretPrevious} from "react-icons/gr"
 import './Pcarousel.css';
 
-import m1 from "../../images/Galley/m1.jpg";
-import m2 from "../../images/Galley/m2.png";
-import m3 from "../../images/Galley/m3.jpg";
-import m4 from "../../images/Galley/m4.png";
-import m5 from "../../images/Galley/m5.jpg";
-import m6 from "../../images/Galley/m6.jpg";
-import m7 from "../../images/Galley/m7.jpg";
-import m8 from "../../images/Galley/m8.png";
+import m1 from "./../../images/Galley/m1.jpg";
+import m2 from "./../../images/Galley/m2.png";
+import m3 from "./../../images/Galley/m3.jpg";
+import m4 from "./../../images/Galley/m4.png";
+import m5 from "./../../images/Galley/m5.jpg";
+import m6 from "./../../images/Galley/m6.jpg";
+import m7 from "./../../images/Galley/m7.jpg";
+import m8 from "./../../images/Galley/m8.png";
 
 const Pcarousel = () => {
   return(

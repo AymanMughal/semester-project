@@ -2,6 +2,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import express from 'express';
 import mongoose from 'mongoose';
+import cookieParser from "cookie-parser";
 import hostelApplications from './routes/applicationRoutes.js';
 
 const app = express();
@@ -19,8 +20,8 @@ app.use(express.static('frontend/build'));
 app.listen(5000);
 
 app.use(cors());
+app.use(cookieParser());
+app.use(express.json());
 app.use(bodyParser.json( { extended: true } ));
 app.use(bodyParser.urlencoded( { extended: true } ));
-app.use("/membershipform", hostelApplications);
-app.use("/viewApplicants", hostelApplications);
-
+app.use("/ichiraku", hostelApplications);

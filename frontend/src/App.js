@@ -1,18 +1,18 @@
 import "./App.css";
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./Components/Homee/Home/Home"
-import Menu from "./Components/Menu/Menu/Menu"
-import About from "./Components/About/About"
-import Navbar from "./Components/Homee/Navbar/Navbar";
+import Home from "./pages/Home/Home"
+import Menu from "./pages/Menu/Menu"
+import About from "./pages/About/About"
+import Navbar from "./Components/Navbar/Navbar";
 import Cart from "./Components/Cart/Cart/Cart";
 import List from "./Components/List/List";
-import Footer from "./Components/Homee/Footer/Footer";
+import Footer from "./Components/Footer/Footer";
 import Checkout from "./Components/Cart/Checkout/Checkout";
-import Loginpage from "./Components/LoginSignup/Loginpage/Loginpage";
-import Form from "./Components/LoginSignup/Form/Form";
-import Menuadmin from "./Components/Menuadmin/Menuadmin"
-
+import Loginpage from "./pages/Loginpage/Loginpage";
+import Form from "./pages/Signup/Form";
+import Form1 from "./pages/SignupUpdate/Form"
+// import Admin from "./Admin/Admin"
 function App() {
 
   const [show, setShow] = useState();
@@ -32,7 +32,10 @@ function App() {
     cart[ind].amount = 1;
     setCart([...cart]);
   };
-
+  const [auth, setAuth] = useState(false);
+function getAuthenticate(value){
+  setAuth(value);
+}
 
   return (
     <div className="App">
@@ -46,10 +49,11 @@ function App() {
           <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/checkout" element={<Checkout />}></Route>
           <Route exact path="/about" element={<About />}></Route>
-          <Route exact path="/membership" element={<Loginpage />}></Route>
+          <Route exact path="/membership" element={<Loginpage uplifter={getAuthenticate} />}></Route>
           <Route exact path="/signup" element={<Form/>}></Route>
-          <Route exact path="/list" element={<List/>}></Route> 
-          <Route exact path="/menuadmin" element={<Menuadmin/>}></Route> 
+          <Route exact path="/list" element={auth ? <List /> : <Loginpage uplifter={getAuthenticate}/>}></Route> 
+          <Route exact path="/edit/:id" element={<Form1/>}></Route> 
+          {/* <Route exact path="/list" element={<List/>}></Route>  */}
 
         </Routes>
        <  Footer className="appfooter"/>

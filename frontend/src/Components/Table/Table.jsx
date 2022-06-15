@@ -1,10 +1,13 @@
 import React from "react";
+import {Link } from "react-router-dom";
+import {AiOutlineEdit,AiOutlineDelete} from "react-icons/ai"
 import "./table.css";
 
 function table(props) {
   console.log(props.values);
   return (
     <div style={{ width: "100%" }}>
+      
       <table className="table">
         <tbody>
           <tr>
@@ -12,10 +15,10 @@ function table(props) {
               {props.index + 1}
             </th>
             <td className="col-4" style={{ width: "15%" }}>
-              {props.FirstName}
+              {props.FullName}
             </td>
             <td className="col-2" style={{ width: "15%" }}>
-              {props.LastName}
+              {props.Username}
             </td>
             <td className="col-2" style={{ width: "15%" }}>
               {props.Password}
@@ -28,12 +31,14 @@ function table(props) {
             <td className="col-2" style={{ width: "10%" }}>
               {props.PhoneNumber}
             </td>
-            <td className="col-2" style={{ width: "10%" }}>
-            <button>Remove</button>
+            <td className="col-2 " style={{ width: "10%" }}  >
+            <Link to={`/edit/${props.info._id}`} > <AiOutlineEdit size={30} color='black' className="tablebutton"/></Link>
             </td>
-            <td className="col-2" style={{ width: "10%" }}>
-            <button>Update</button>
+            <td className="col-2" style={{ width: "10%" }} onClick={()=>props.handleDelete(props.info._id)}>
+              
+            <AiOutlineDelete size={30} className="tablebutton"/>
             </td>
+           
           </tr>
          
         </tbody>
